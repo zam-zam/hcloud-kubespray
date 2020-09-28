@@ -1,0 +1,24 @@
+---
+override_system_hostname: false
+
+kube_api_anonymous_auth: true
+
+kube_version: v1.18.9
+kube_version_min_required: v1.17.0
+kubeadm_use_hyperkube_image: true
+kube_proxy_mode: ipvs
+enable_nodelocaldns: false
+
+kube_network_plugin: flannel
+container_manager: docker
+
+upstream_dns_servers:
+  - 1.1.1.1
+  - 8.8.8.8
+
+deploy_container_engine: false
+
+kube_proxy_nodeport_addresses:
+  - "192.168.1.0/24"
+
+dns_min_replicas: 1
